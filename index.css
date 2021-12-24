@@ -15,7 +15,6 @@ body {
 * {
   box-sizing: border-box;
   list-style: none;
-  font-size: 14px;
 }
 p,
 ul,
@@ -33,7 +32,7 @@ main {
 
 /* header styles */
 header {
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,6 +40,8 @@ header {
   background: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: fixed;
+  width: 100%;
 }
 /* header items container styles */
 .header-container {
@@ -57,8 +58,8 @@ header {
 }
 /* humberger menu */
 .menu-icon {
-  height: 16px;
-  width: 20px;
+  height: 20px;
+  width: 24px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -69,17 +70,21 @@ header {
   border-bottom: 3px solid;
   width: 100%;
 }
+.turn-green {
+  color:green;
+}
 .logo {
   font-weight: bold;
-  font-size: 20px;
-  color: #2cb67d;
+  font-size: 30px;
+  color: green;
   cursor: pointer;
 }
 /* side navigation fo smaller devices */
 .side-nav-overlay {
   background: rgba(35, 212, 232, 0.07);
-  height: calc(100vh - 50px);
-  position: absolute;
+  height: calc(100vh - 70px);
+  position: fixed;
+  bottom: 0;
   width: 100%;
   transform: translateX(-100%);
   transition: transform 0.5s;
@@ -95,7 +100,7 @@ header {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 50px);
-  padding-top: 2em;
+  padding-top: 3em;
   font-weight: 600;
   background: rgba(13, 30, 9, 0.07);
 }
@@ -104,7 +109,8 @@ header {
   transition: background-color 0.5s;
 }
 .side-navigation ul li:hover {
-  background: rgb(131, 225, 93);
+  background: rgb(42, 60, 38);
+  color:#ffffff
 }
 .side-navigation a,
 .nav-item {
@@ -113,13 +119,13 @@ header {
   text-transform: capitalize;
 }
 
+
 /* sections */
 section {
-  height: 600px;
+  height: 100vh;
   scroll-behavior: smooth;
 }
 #services {
-  background: lightblue;
 }
 #commitment {
   background: teal;
@@ -133,11 +139,12 @@ section {
 
 /* media queries */
 @media screen and (min-width: 600px) {
+  
   header {
-    height: 70px;
+    height: 80px;
   }
   .logo {
-    font-size: 25px;
+    font-size: 35px;
   }
   .menu-icon {
     display: none;
