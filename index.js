@@ -8,13 +8,18 @@ menuBtn.addEventListener("click", () => {
   for (let humberItem of humbergers) {
     humberItem.classList.toggle("turn-green");
   }
-  if (sideNav.classList.contains("show-side-nav") && window.innerWidth <= 600) {
-    document.body.style.overflow = "hidden";
-  }else{
-    document.body.style.overflow = "visible"
-  }
+  hideOverFlow();
 });
 
 sideNav.addEventListener("click", () => {
   sideNav.classList.toggle("show-side-nav");
+  hideOverFlow();
 });
+
+const hideOverFlow = () => {
+  if (sideNav.classList.contains("show-side-nav") && window.innerWidth <= 600) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "visible";
+  }
+};
