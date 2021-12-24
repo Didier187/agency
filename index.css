@@ -71,7 +71,7 @@ header {
   width: 100%;
 }
 .turn-green {
-  color:green;
+  color: green;
 }
 .logo {
   font-weight: bold;
@@ -84,6 +84,7 @@ header {
   background: rgba(35, 212, 232, 0.07);
   height: calc(100vh - 70px);
   position: fixed;
+  top: 70px;
   bottom: 0;
   width: 100%;
   transform: translateX(-100%);
@@ -110,7 +111,7 @@ header {
 }
 .side-navigation ul li:hover {
   background: rgb(42, 60, 38);
-  color:#ffffff
+  color: #ffffff;
 }
 .side-navigation a,
 .nav-item {
@@ -118,7 +119,6 @@ header {
   padding: 0.5em;
   text-transform: capitalize;
 }
-
 
 /* sections */
 section {
@@ -139,7 +139,6 @@ section {
 
 /* media queries */
 @media screen and (min-width: 600px) {
-  
   header {
     height: 80px;
   }
