@@ -1,12 +1,18 @@
 // javascript
 const menuBtn = document.getElementById("menu-icon");
 const sideNav = document.getElementById("side-nav-overlay");
-const humbergers = document.getElementsByClassName("humberger");
+const humbergerItems = document.getElementsByClassName("humberger");
+const currentYear = document.getElementById("current-year")
+
+//copyright year
+var today = new Date();
+var year = today.getFullYear();
+currentYear.innerText = year
 
 menuBtn.addEventListener("click", () => {
   sideNav.classList.toggle("show-side-nav");
-  for (let humberItem of humbergers) {
-    humberItem.classList.toggle("turn-green");
+  for (let humbergerItem of humbergerItems) {
+    humbergerItem.classList.toggle("turn-green");
   }
   hideOverFlow();
 });
